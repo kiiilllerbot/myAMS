@@ -1,0 +1,22 @@
+<div class="payment-show">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-text text-center">Payment Deposited by <%= @payment.student.name %></h5>
+					<hr class="my-4">
+					<p class="card-text">Student Matric ID :<%= @payment.student.matric_id %></p>
+					<p class="card-text">Payment ID :<%="#{@payment.student.matric_id}"%>-<%= "#{@payment.id}" %></p>
+					<p class="card-text">Amount: <%= @payment.amount %></p>
+					<p class="card-text">Description: <%= @payment.description %></p>
+					<small><%= @payment.created_at.strftime("%b,%d,%Y")%></small>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="padding-top: 5px">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<%= link_to 'Back', payments_path,:class=>"btn btn-danger btn-block"%>
+		</div>
+	</div>
+</div>

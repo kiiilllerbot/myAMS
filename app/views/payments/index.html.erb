@@ -1,0 +1,21 @@
+<div class="payment-index">
+  <div class="row">
+    <% @payments.each do |payment| %>
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-text"><%= link_to payment.student.name,payment %> | <%= link_to payment.student.matric_id,payment%></h5>
+            <small>Deposited <strong><%= payment.amount %> MYR</strong> at <%= payment.created_at.strftime("%B,%d,%Y")%></small>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="row" style="padding: 5px 0px">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <%= link_to 'New Payment', new_payment_path,:class=>"btn btn-danger btn-block"%>
+    </div>
+  </div>
+</div>
+
+
