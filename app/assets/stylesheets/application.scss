@@ -4,6 +4,15 @@ html,body{
 	color: #EEEEEE;
 	margin-top: 20px;
 }
+
+select {
+   width: 100%;
+   border-radius: 0px !important;
+   -webkit-appearance: none;
+   -webkit-border-radius: 0px;
+   height: 40px;
+   padding: 8px;
+}
 a{
 	color: #EEEEEE;
 	text-decoration: none;

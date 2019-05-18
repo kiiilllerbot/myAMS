@@ -1,0 +1,25 @@
+<div class="student-index">
+    <div class="row">
+    <% @students.each do |student| %>
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-text"><%= link_to student.name %> | <%= link_to student.matric_id,student %></h6>
+            <div class="button-group">
+              <%= link_to "Show",student,:class=>"btn btn-secondary btn-sm"%>
+              <%= link_to "Edit",edit_student_path(student),:class=>"btn btn-secondary btn-sm"%>
+              <%= link_to "Delete",student_path(student),method: :delete,data:{confirm:'Are you sure?'},:class=>"btn btn-secondary btn-sm"%>
+            </div>
+            <div class="small">Added at <%= student.created_at.strftime("%B,%d,%Y")%></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="row" style="padding: 5px 0px">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <%= link_to 'Add New Student', new_student_path,:class=>"btn btn-danger btn-block" %>
+    </div>
+  </div>
+</div>
+
