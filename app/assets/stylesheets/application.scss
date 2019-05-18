@@ -2,25 +2,44 @@
 html,body{
 	background-color: #212121;
 	color: #EEEEEE;
+	margin-top: 20px;
 }
+a{
+	color: #EEEEEE;
+	text-decoration: none;
+	opacity: 1;
+	}
+a:hover{
+	color: #EEEEEE;
+	text-decoration: none;
+	}
 .form-control{
 	border-radius: 0;
 }
 .btn{
 	border-radius: 0;
 }
-a{
+.card{
+	background-color: #263238;
+	border-radius: 0;
+	color: #EEEEEE;
+	margin-bottom: 3px;
+}
+.small{
+	margin-top:3px;
+}
+.sign-in, .sign-up{
+	margin-top: 150px;
+	a{
 	color: #EEEEEE;
 	text-decoration: none;
 	opacity: 0.5;
 }
-a:hover{
-	color: #EEEEEE;
-	text-decoration: none;
-	opacity: 1;
-}
-.sign-in, .sign-up{
-	margin-top: 150px;
+	a:hover{
+		color: #EEEEEE;
+		text-decoration: none;
+		opacity: 1;
+	}
 	h4{
 		padding: 20px 0px;
 	}
@@ -36,4 +55,18 @@ a:hover{
 .links{
 	text-align: center;
 	margin-top: 10px;
+}
+.faculty-index{
+	a{
+	color: #EEEEEE;
+	text-decoration: none;
+	opacity: 1;
+	}
+	a:hover{
+	color: #EEEEEE;
+	text-decoration: none;
+	}
+}
+.faculty-new,.faculty-edit{
+	margin-top: 25px;
 }
