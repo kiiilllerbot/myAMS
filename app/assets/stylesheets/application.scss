@@ -1,1 +1,39 @@
 @import "bootstrap";
+html,body{
+	background-color: #212121;
+	color: #EEEEEE;
+}
+.form-control{
+	border-radius: 0;
+}
+.btn{
+	border-radius: 0;
+}
+a{
+	color: #EEEEEE;
+	text-decoration: none;
+	opacity: 0.5;
+}
+a:hover{
+	color: #EEEEEE;
+	text-decoration: none;
+	opacity: 1;
+}
+.sign-in, .sign-up{
+	margin-top: 150px;
+	h4{
+		padding: 20px 0px;
+	}
+	.fas{
+		font-size: 100px;
+		color: #FF4848;
+		opacity: 0.5;
+	}
+	.links{
+		padding-top: 5px;
+	}
+}
+.links{
+	text-align: center;
+	margin-top: 10px;
+}
