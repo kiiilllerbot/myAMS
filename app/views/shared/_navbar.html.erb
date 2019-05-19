@@ -26,6 +26,9 @@
             <%= link_to "Meeting",meetings_path,:class=>"nav-link"%>
           </li>
           <li class="nav-item">
+            <%= link_to "Report Bug",bugs_path,:class=>"nav-link"%>
+          </li>
+          <li class="nav-item">
             <%= link_to "Sign-out",destroy_user_session_path,method: :delete,:class=>"nav-link"%>
           </li>
         <% else %>
