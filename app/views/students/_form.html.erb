@@ -1,7 +1,13 @@
 
 <%= simple_form_for(@student) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <% if @student.errors.any? %>
+    <p><%= pluralize(@student.errors.count, "Errors")%></p>
+    <ul>
+        <%= @student.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+  <% end %>
 
   <div class="form-inputs">
     <%= f.input :user_id,:as => :hidden %>
@@ -53,7 +59,7 @@
     <br><br>
 
     <label>Race</label><br>
-    <%= f.select :student_type,["Malay","Chinese","Indian","Peninsula Malaysia","Sabah","Kadazan Dusun","Bajau","Murut","Sarawak","Iban","Bidayuh","Melanau","Orang Ulu","Others"],prompt:"Select Race" %>
+    <%= f.select :race,["Malay","Chinese","Indian","Peninsula Malaysia","Sabah","Kadazan Dusun","Bajau","Murut","Sarawak","Iban","Bidayuh","Melanau","Orang Ulu","Others"],prompt:"Select Race" %>
     <br><br>
     <label>Religion</label><br>
     <%= f.select :religion,["Islam","Christian","Buddhist","Hindu","Others"],prompt:"Select Religion"%>
