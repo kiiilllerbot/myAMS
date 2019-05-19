@@ -1,0 +1,27 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h4,p{
+	color: #EEEEEE;
+	opacity: 0.90;
+	text-align: center;
+}
+.fas{
+	color: #FF4848;
+	font-size: 75px;
+}
+#particles-js{
+	margin-top: -8px;
+	background-image: url("cover.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.particles-js-canvas-el{
+	position: absolute;
+}

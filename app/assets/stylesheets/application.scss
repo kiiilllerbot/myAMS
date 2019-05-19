@@ -1,8 +1,24 @@
 @import "bootstrap";
+@import "home";
 html,body{
 	background-color: #212121;
 	color: #EEEEEE;
 	margin-top: 20px;
+}
+// Center Collapse Menu
+@media (max-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+.navbar-toggler{
+	border: 0;
 }
 .active{
 	border-bottom: 1px solid #EEEEEE;
