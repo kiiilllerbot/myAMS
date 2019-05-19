@@ -1,0 +1,19 @@
+<div class="register-index">
+    <div class="row">
+    <% @registers.each do |register| %>
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-text"><%= link_to register.student.name,register %> | <%= link_to register.student.matric_id, register%></h6>
+            <div class="small">Registered at <%= register.created_at.strftime("%B,%d,%Y")%></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="row" style="padding: 5px 0px">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <%= link_to 'Register New Student', new_register_path,:class=>"btn btn-danger btn-block" %>
+    </div>
+  </div>
+</div>

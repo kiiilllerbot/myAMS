@@ -17,6 +17,12 @@
             <%= link_to "Programs",programs_path,:class=>"nav-link"%>
           </li>
           <li class="nav-item">
+            <%= link_to "Payments",payments_path,:class=>"nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Registrations",registers_path,:class=>"nav-link"%>
+          </li>
+          <li class="nav-item">
             <%= link_to "Sign-out",destroy_user_session_path,method: :delete,:class=>"nav-link"%>
           </li>
         <% else %>

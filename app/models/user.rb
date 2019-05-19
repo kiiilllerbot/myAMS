@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :programs
   has_many :students
   has_many :payments
+  has_many :registers
 end
