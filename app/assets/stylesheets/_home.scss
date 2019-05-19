@@ -10,8 +10,15 @@ h4,p{
 	color: #FF4848;
 	font-size: 75px;
 }
+.home{
+	width: 100%;
+	margin: 0;
+}
 #particles-js{
 	margin-top: -8px;
+	margin-left: 11px;;
+	padding-right: 18px;
+	//margin-right: 11px;
 	background-image: url("cover.jpg");
 	background-attachment: fixed;
 	background-size: cover;
@@ -23,5 +30,7 @@ h4,p{
 	align-items: center;
 }
 .particles-js-canvas-el{
+	width: 100%;
+	margin: 0;
 	position: absolute;
 }
