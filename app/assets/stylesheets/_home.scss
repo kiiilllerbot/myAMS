@@ -6,6 +6,9 @@ h4,p{
 	opacity: 0.90;
 	text-align: center;
 }
+.alert{
+	z-index: 1000;
+}
 .fas{
 	color: #FF4848;
 	font-size: 75px;
@@ -15,6 +18,7 @@ h4,p{
 	margin: 0;
 }
 #particles-js{
+	z-index: -1;
 	margin-top: -8px;
 	margin-left: 11px;;
 	padding-right: 18px;
