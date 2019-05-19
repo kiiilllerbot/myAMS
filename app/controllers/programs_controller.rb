@@ -4,7 +4,7 @@ class ProgramsController < ApplicationController
   # GET /programs
   # GET /programs.json
   def index
-    @programs = Program.all
+    @programs = Program.where(["name LIKE ?","%#{params[:search]}%"])
   end
 
   # GET /programs/1

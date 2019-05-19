@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_19_142306) do
+ActiveRecord::Schema.define(version: 2019_05_19_160156) do
 
   create_table "bugs", force: :cascade do |t|
     t.integer "user_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_19_142306) do
     t.integer "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "matric_id"
     t.index ["student_id"], name: "index_meetings_on_student_id"
   end
 
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_05_19_142306) do
     t.integer "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "matric_id"
     t.index ["student_id"], name: "index_payments_on_student_id"
   end
 
@@ -62,6 +64,7 @@ ActiveRecord::Schema.define(version: 2019_05_19_142306) do
     t.integer "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "matric_id"
     t.index ["student_id"], name: "index_registers_on_student_id"
   end
 

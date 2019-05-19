@@ -4,7 +4,7 @@ class MeetingsController < ApplicationController
   # GET /meetings
   # GET /meetings.json
   def index
-    @meetings = Meeting.all
+    @meetings = Meeting.where(["matric_id LIKE ?","%#{params[:search]}%"])
   end
 
   # GET /meetings/1
@@ -69,6 +69,6 @@ class MeetingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meeting_params
-      params.require(:meeting).permit(:user_id, :time_and_date, :description, :student_id)
+      params.require(:meeting).permit(:user_id, :time_and_date, :description, :student_id,:matric_id)
     end
 end

@@ -1,4 +1,21 @@
+<% provide(:payment, "active") %>
 <div class="payment-index">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="search">
+              <form class="form-inline my-2 my-lg-0">
+                <%= form_tag payments_path, :method => 'get' do %>
+                  <%= text_field_tag :search,params[:search],:class=>"form-control mr-sm-2",:placeholder => "Search by Matric Id"%>
+                  <%= submit_tag "Search",:class=>"btn btn-danger "%>
+                <% end %>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <div class="row">
     <% @payments.each do |payment| %>
       <div class="col-sm-12 col-md-12 col-lg-12">

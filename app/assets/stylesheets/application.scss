@@ -4,6 +4,26 @@ html,body{
 	color: #EEEEEE;
 	margin-top: 20px;
 }
+.active{
+	border-bottom: 1px solid #EEEEEE;
+}
+.search{
+	margin: 0 auto;
+    width:80%;
+	input[type="text"]{
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.search{
+	margin: 0 auto;
+    width:80%;
+	input[type="text"]{
+		width: 75%;
+		}
+	}
+}
 
 select {
    width: 100%;

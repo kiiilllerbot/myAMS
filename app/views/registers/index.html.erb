@@ -1,4 +1,21 @@
+<% provide(:register, "active") %>
 <div class="register-index">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="search">
+              <form class="form-inline my-2 my-lg-0">
+                <%= form_tag registers_path, :method => 'get' do %>
+                  <%= text_field_tag :search,params[:search],:class=>"form-control mr-sm-2",:placeholder => "Search by matric id"%>
+                  <%= submit_tag "Search",:class=>"btn btn-danger "%>
+                <% end %>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row">
     <% @registers.each do |register| %>
       <div class="col-sm-12 col-md-12 col-lg-12">

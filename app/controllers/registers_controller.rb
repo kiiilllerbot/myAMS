@@ -4,7 +4,8 @@ class RegistersController < ApplicationController
   # GET /registers
   # GET /registers.json
   def index
-    @registers = Register.all
+    #@registers = Register.all
+    @registers = Register.where(["matric_id LIKE ?","%#{params[:search]}%"])
   end
 
   # GET /registers/1
@@ -69,6 +70,6 @@ class RegistersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def register_params
-      params.require(:register).permit(:user_id, :description, :semester, :student_id)
+      params.require(:register).permit(:user_id, :description, :semester, :student_id,:matric_id)
     end
 end
