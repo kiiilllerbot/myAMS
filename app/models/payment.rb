@@ -4,4 +4,5 @@ class Payment < ApplicationRecord
 
   validates :amount, presence:true
   validates :description, presence:true
+  validates :matric_id, presence:true
 end

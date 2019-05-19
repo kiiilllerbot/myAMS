@@ -4,4 +4,5 @@ class Register < ApplicationRecord
 
   validates :semester, presence:true
   validates :description, presence:true
+  validates :matric_id, presence:true
 end
