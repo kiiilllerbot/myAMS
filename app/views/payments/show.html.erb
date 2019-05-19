@@ -7,10 +7,10 @@
 				<div class="card-body">
 					<h5 class="card-text text-center">Payment Deposited by <%= @payment.student.name %></h5>
 					<hr class="my-4">
-					<p class="card-text">Student Matric ID :<%= @payment.student.matric_id %></p>
-					<p class="card-text">Payment ID :<%="#{@payment.student.matric_id}"%>-<%= "#{@payment.id}" %></p>
-					<p class="card-text">Amount: <%= @payment.amount %></p>
-					<p class="card-text">Description: <%= @payment.description %></p>
+					Student Matric ID :<%= @payment.student.matric_id %> <br>
+					Payment ID :<%="#{@payment.student.matric_id}"%>-<%= "#{@payment.id}" %> <br>
+					Amount: <%= @payment.amount %> <br>
+					Description: <%= @payment.description %> <br>
 					<small><%= @payment.created_at.strftime("%b,%d,%Y")%></small>
 				</div>
 			</div>

@@ -25,8 +25,12 @@
             <h6 class="card-text"><%= link_to program.name %></h6>
             <div class="button-group">
               <%= link_to "Show",program,:class=>"btn btn-secondary btn-sm"%>
-              <%= link_to "Edit",edit_program_path(program),:class=>"btn btn-secondary btn-sm"%>
-              <%= link_to "Delete",program_path(program),method: :delete,data:{confirm:'Are you sure?'},:class=>"btn btn-secondary btn-sm"%>
+              <% if can? :update, @program %>
+                <%= link_to "Edit",edit_program_path(program),:class=>"btn btn-secondary btn-sm"%>
+              <% end %>
+              <% if can? :destroy, @program %>
+                <%= link_to "Delete",program_path(program),method: :delete,data:{confirm:'Are you sure?'},:class=>"btn btn-secondary btn-sm"%>
+              <% end %>
             </div>
             <div class="small">Added at <%= program.created_at.strftime("%B,%d,%Y")%></div>
           </div>
@@ -34,10 +38,12 @@
       </div>
     <% end %>
   </div>
-  <div class="row" style="padding: 5px 0px">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-      <%= link_to 'Add New Program', new_program_path,:class=>"btn btn-danger btn-block" %>
+  <% if can? :create, @program %>
+    <div class="row" style="padding: 5px 0px">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <%= link_to 'Add New Program', new_program_path,:class=>"btn btn-danger btn-block" %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
 </div>

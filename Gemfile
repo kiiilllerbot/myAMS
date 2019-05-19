@@ -27,6 +27,7 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'simple_form', '~> 4.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'country_select', '~> 4.0'
+gem 'cancancan', '~> 3.0', '>= 3.0.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

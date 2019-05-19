@@ -25,8 +25,12 @@
             <h6 class="card-text"><%= link_to faculty.name %></h6>
             <div class="button-group">
               <%= link_to "Show",faculty,:class=>"btn btn-secondary btn-sm"%>
-              <%= link_to "Edit",edit_faculty_path(faculty),:class=>"btn btn-secondary btn-sm"%>
-              <%= link_to "Delete",faculty_path(faculty),method: :delete,data:{confirm:'Are you sure?'},:class=>"btn btn-secondary btn-sm"%>
+              <% if can? :update, @faculty%>
+                <%= link_to "Edit",edit_faculty_path(faculty),:class=>"btn btn-secondary btn-sm"%>
+              <% end %>
+              <% if can? :destroy, @faculty%>
+                <%= link_to "Delete",faculty_path(faculty),method: :delete,data:{confirm:'Are you sure?'},:class=>"btn btn-secondary btn-sm"%>
+              <% end %>
             </div>
             <div class="small">Added at <%= faculty.created_at.strftime("%B,%d,%Y")%></div>
           </div>
@@ -34,10 +38,12 @@
       </div>
     <% end %>
   </div>
+  <% if can? :create, @faculty%>
   <div class="row" style="padding: 5px 0px">
     <div class="col-sm-12 col-md-12 col-lg-12">
       <%= link_to 'Add New Faculty', new_faculty_path,:class=>"btn btn-danger btn-block" %>
     </div>
   </div>
+  <% end %>
 </div>
 </div>

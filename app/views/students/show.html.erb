@@ -7,15 +7,7 @@
         <div class="card-body">
           <h5 class="text-center"><%= @student.name %></h5>
           <hr class="my-4">
-          <h6>Basic Information
-            <div class="float-right">
-              <%= link_to edit_student_path do %>
-                <button type="button" class="btn btn-sm btn-danger">
-                  <i class="fas fa-pencil-alt"></i>
-                </button>
-              <% end %>
-            </div>
-          </h6>
+          <h6>Basic Information</h6>
           <table>
             <tr>
               <td>Matric ID</td>
@@ -205,9 +197,11 @@
           </table>
         </div>
       </div>
+      <% if can? :update, @student %>
       <div class="link" style="padding-bottom: 5px">
         <%= link_to 'Edit', edit_student_path(@student),:class=>"btn btn-danger btn-block"%>
       </div>
+      <% end %>
     </div>
   </div>
 </div>

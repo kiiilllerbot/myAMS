@@ -29,11 +29,13 @@
       </div>
     <% end %>
   </div>
-  <div class="row" style="padding: 5px 0px">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-      <%= link_to 'New Payment', new_payment_path,:class=>"btn btn-danger btn-block"%>
+  <% if can? :create, @payment %>
+    <div class="row" style="padding: 5px 0px">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <%= link_to 'New Payment', new_payment_path,:class=>"btn btn-danger btn-block"%>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
 </div>
 
