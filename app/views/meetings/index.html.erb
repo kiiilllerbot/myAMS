@@ -1,0 +1,24 @@
+<div class="meeting-index">
+    <div class="row">
+    <% @meetings.each do |meeting| %>
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-text"><%= link_to meeting.student.name %> | <%= link_to meeting.student.matric_id, meeting%></h6>
+            <div class="button-group">
+              <%= link_to "Show",meeting,:class=>"btn btn-secondary btn-sm"%>
+              <%= link_to "Edit",edit_meeting_path(meeting),:class=>"btn btn-secondary btn-sm"%>
+              <%= link_to "Delete",meeting_path(meeting),method: :delete,data:{confirm:'Are you sure?'},:class=>"btn btn-secondary btn-sm"%>
+            </div>
+            <div class="small">Meeting at <strong><%= meeting.created_at.strftime("%B,%d,%Y")%></strong></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="row" style="padding: 5px 0px">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <%= link_to 'Add New Meeting', new_meeting_path,:class=>"btn btn-danger btn-block" %>
+    </div>
+  </div>
+</div>
